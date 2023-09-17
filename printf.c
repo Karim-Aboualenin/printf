@@ -16,8 +16,8 @@ char *buffer;
 {'c', print_char,
 {'s', print_string}}
 }*/
-va_list args;
-if (format == NULL);
+//va_list args;
+if (format == NULL)
 return (-1);
 buffer = malloc(sizeof (char) * 1024);
 if (buffer == NULL)
@@ -29,6 +29,6 @@ if (format[i] != '%')
 buffer[i] == format[i];
 i++, length++;
 }}
-write (1,buffer,i);
+write (1, buffer, length);
 return(length);
 }
