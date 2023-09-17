@@ -15,8 +15,8 @@ char *buffer;
 /*specifiers_t specifiers[] = {
 {'c', print_char,
 {'s', print_string}}
-}*/
-//va_list args;
+}
+va_list args;*/
 if (format == NULL)
 return (-1);
 buffer = malloc(sizeof (char) * 1024);
@@ -26,7 +26,7 @@ while (format[i] != '\0')
 {
 if (format[i] != '%')
 {
-buffer[i] == format[i];
+buffer[i] = format[i];
 i++, length++;
 }}
 write (1, buffer, length);
