@@ -9,6 +9,7 @@
 void print_char(va_list args)
 {
 char s;
+printf("enter print_sting");
 s = va_arg(args, int);
 write(1, &s, 1);
 }
