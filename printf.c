@@ -39,7 +39,7 @@ return (-1);
 else
 {
 get_print_function(format[i]);
-print ("HAHA")
+print ("HAHA");
 i++;
 }}}
 return (length);
