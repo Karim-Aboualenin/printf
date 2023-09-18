@@ -17,14 +17,14 @@
 typedef struct specifiers
 {
 char specifier;
-void (*func)(va_list);
+int (*func)(va_list);
 } specifiers_t;
 
 int _strlen(char *s);
 
 
 int _printf(const char *format, ...);
-void (*get_print_function(char s))(va_list);
-void print_char(va_list args);
-void print_string(va_list args);
+int (*get_print_function(char s))(va_list);
+int print_char(va_list args);
+int print_string(va_list args);
 #endif

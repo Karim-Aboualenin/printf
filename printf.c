@@ -10,8 +10,8 @@
 
 int _printf(const char *format, ...)
 {
-int i = 0, length = 0;
-void (*func)(va_list);
+int i = 0, length = 0, length_return = 0;
+int (*func)(va_list);
 va_list args;
 if (format == NULL)
 return (-1);
@@ -39,8 +39,9 @@ return (-1);
 else
 {
 func = get_print_function(format[i]);
-func(args);
+length_func(args);
 i++;
+length += length_return;
 }}}
 return (length);
 }
