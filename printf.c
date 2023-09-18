@@ -25,6 +25,7 @@ i++, length++;
 }
 else /*if % found*/
 {
+printf("enter else");
 i++;
 if (format[i] == '%')
 {
