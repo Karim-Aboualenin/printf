@@ -9,7 +9,6 @@
 void print_char(va_list args)
 {
 char s;
-printf("enter ch");
 s = va_arg(args, int);
 write(1, &s, 1);
 }
@@ -23,7 +22,10 @@ void print_string(va_list args)
 {
 int len;
 char *s = va_arg(args, char *);
-printf("enter print_string");
+char *p;
 len = strlen(s);
-write(1, &s, len);
+p = malloc (sizeof(char) * len + 1);
+if (p == NULL){}
+strcpy(p, s);
+write(1, &p, len);
 }
