@@ -19,6 +19,7 @@ while (specifiers[i].specifier != '\0')
 {
 if (specifiers[i].specifier == s)
 {
+printf("specifiers[i].specifier == s")
 return (specifiers[i].f);
 }
 i++;
