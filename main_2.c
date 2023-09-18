@@ -11,11 +11,8 @@ int main(void)
 {
   int len;
     int len2;
-len =  _printf("String:[%s]\n", "I am a string !");
-len2 = printf("String:[%s]\n", "I am a string !");
+len =  _printf("Character:[%c]\n", 'H');
+len2 = printf("Character:[%c]\n", 'H');
  printf("Length:[%d, %i]\n", len, len2);
-_printf("Character:[%c]\n", 'H');
-printf("Character:[%c]\n", 'H');
-
     return(0);
 }
