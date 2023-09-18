@@ -24,6 +24,6 @@ int len;
 char *s = va_arg(args, char *);
 if (s == NULL)
 s = "(null)";
-len = strlen(s);
+len = _strlen(s);
 write(1, s, len);
 }
