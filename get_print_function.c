@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_print_func - selects the correct function
+ * get_print_function - selects the correct function
  * to perform the right print function based on the specifier
  * @s: the operator passed as argument to the program
  * Return: returns a pointer to the function that
