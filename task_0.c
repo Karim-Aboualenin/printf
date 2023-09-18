@@ -24,5 +24,5 @@ int len;
 char *s = va_arg(args, char *);
 printf("%s",s);
 len = strlen(s);
-write(1, &s, len);
+write(1, s, len);
 }
