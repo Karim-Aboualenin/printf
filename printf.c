@@ -12,11 +12,8 @@ int _printf(const char *format, ...)
 {
 int i = 0, length = 0;
 char *buffer;
-/*specifiers_t specifiers[] = {
-{'c', print_char,
-{'s', print_string}}
-}
-va_list args;*/
+
+va_list args;
 if (format == NULL)
 return (-1);
 buffer = malloc(sizeof (char) * 1024);
@@ -28,7 +25,25 @@ if (format[i] != '%')
 {
 buffer[i] = format[i];
 i++, length++;
-}}
+}
+else /*if % found*/
+{
+i++;
+if (format[i] == '%')
+{
+buffer[i] = format[i];
+i++, length++;
+}
+if (format[i] == '/0')
+{
+va_end(args);
+free(buffer);
+return (-1);
+}
+else
+get_print_function(format[i]);
+}
+}
 write (1, buffer, length);
 return(length);
 }
