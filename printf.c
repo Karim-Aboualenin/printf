@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0;
-
+void (*func)(va_list);
 va_list args;
 if (format == NULL)
 return (-1);
@@ -38,8 +38,8 @@ return (-1);
 }
 else
 {
-get_print_function(format[i], args);
-printf("HAHA");
+func = get_print_function(format[i]);
+func(args);
 i++;
 }}}
 return (length);

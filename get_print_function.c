@@ -7,7 +7,7 @@
  * Return: returns a pointer to the function that
  * corresponds to the operator given as a parameter
  */
-void (*get_print_function(char s, va_list args))(va_list)
+void (*get_print_function(char s))(va_list)
 {
 specifiers_t specifiers[] = {
 {'c', print_char},
@@ -19,9 +19,7 @@ while (specifiers[i].specifier != '\0')
 {
 if (specifiers[i].specifier == s)
 {
-printf("%d",i);
-return (specifiers[i].func(args));
-printf("NOPE");
+return (specifiers[i].func);
 }
 i++;
 }
