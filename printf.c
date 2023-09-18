@@ -31,7 +31,7 @@ if (format[i] == '%')
 write(1, &format[i], 1);
 i++, length++;
 }
-if (format[i] == '\0')
+else if (format[i] == '\0')
 {
 va_end(args);
 return (-1);
