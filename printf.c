@@ -37,8 +37,10 @@ va_end(args);
 return (-1);
 }
 else
+{
+printf("enter else");
 get_print_function(format[i]);
-}
+}}
 }
 return (length);
 }
