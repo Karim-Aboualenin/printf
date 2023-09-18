@@ -39,7 +39,7 @@ return (-1);
 else
 {
 func = get_print_function(format[i]);
-length_func(args);
+length_return = func(args);
 i++;
 length += length_return;
 }}}
