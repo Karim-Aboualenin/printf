@@ -20,6 +20,7 @@ write(1, &s, 1);
 
 void print_string(va_list args)
 {
+printf("enter print_sting");
 int len;
 char *s = va_arg(args, char *);
 len = strlen(s);

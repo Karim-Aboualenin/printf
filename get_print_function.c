@@ -15,7 +15,6 @@ specifiers_t specifiers[] = {
 {'\0', NULL}
 };
 int i = 0;
-printf("%c\n",s);
 while (specifiers[i].specifier != '\0')
 {
 if (specifiers[i].specifier == s)
