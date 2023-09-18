@@ -10,6 +10,6 @@
 int main(void)
 {
       _printf(NULL);
-      printf(NULL);
+      
     return(0);
 }
