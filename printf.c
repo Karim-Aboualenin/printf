@@ -25,7 +25,6 @@ i++, length++;
 }
 else /*if % found*/
 {
-printf("enter else");
 i++;
 if (format[i] == '%')
 {
@@ -39,9 +38,8 @@ return (-1);
 }
 else
 {
-printf("enter else");
 get_print_function(format[i]);
-}}
-}
+i++;
+}}}
 return (length);
 }
