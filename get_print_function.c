@@ -23,4 +23,5 @@ return (specifiers[i].f);
 }
 i++;
 }
+return (NULL);
 }

@@ -34,7 +34,7 @@ if (format[i] == '%')
 buffer[i] = format[i];
 i++, length++;
 }
-if (format[i] == '/0')
+if (format[i] == '\0')
 {
 va_end(args);
 free(buffer);
