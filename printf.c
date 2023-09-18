@@ -20,7 +20,7 @@ while (format[i] != '\0')
 {
 if (format[i] != '%')
 {
-write(1, format[i], 1);
+write(1, &format[i], 1);
 i++, length++;
 }
 else /*if % found*/
@@ -28,7 +28,7 @@ else /*if % found*/
 i++;
 if (format[i] == '%')
 {
-write(1, format[i], 1);
+write(1, &format[i], 1);
 i++, length++;
 }
 if (format[i] == '\0')
