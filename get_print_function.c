@@ -15,7 +15,7 @@ specifiers_t specifiers[] = {
 {'\0', NULL}
 };
 int i = 0;
-while (i > 2)
+while (specifiers[i].specifier != '\0')
 {
 if (specifiers[i].specifier == s)
 {
