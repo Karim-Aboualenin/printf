@@ -3,7 +3,7 @@
 /**
  * print_char - print a character
  * @args: the list contain characters
- * return: 1
+ * Return: 1
 */
 
 int print_char(va_list args)
@@ -16,7 +16,7 @@ return (1);
 /**
  * print_string - print a string
  * @args: the list contain characters
- * return: number of characters in the string
+ * Return: number of characters in the string
 */
 
 int print_string(va_list args)
