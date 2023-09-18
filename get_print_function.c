@@ -9,6 +9,7 @@
  */
 void (*get_print_function(char s))(va_list)
 {
+printf("enter get print function /n")
 specifiers_t specifiers[] = {
 {'c', print_char},
 {'s', print_string},
