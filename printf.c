@@ -38,7 +38,7 @@ return (-1);
 }
 else
 {
-get_print_function(format[i]);
+get_print_function(format[i], args);
 printf("HAHA");
 i++;
 }}}
