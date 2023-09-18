@@ -6,7 +6,7 @@
  * return: 1
 */
 
-void print_char(va_list args)
+int print_char(va_list args)
 {
 char s;
 s = va_arg(args, int);
@@ -19,7 +19,7 @@ return (1);
  * return: number of characters in the string
 */
 
-void print_string(va_list args)
+int print_string(va_list args)
 {
 int len;
 char *s = va_arg(args, char *);
