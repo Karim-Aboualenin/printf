@@ -26,7 +26,7 @@ int print_string(va_list args)
 int len;
 char *s = va_arg(args, char *);
 if (s == NULL)
-s = "(null)\n";
+s = "(null)";
 len = _strlen(s);
 write(1, s, len);
 return (len);
