@@ -20,7 +20,7 @@ char specifier;
 void (*f)(va_list);
 } specifiers_t;
 
-void _printf(const char *format, ...);
+int _printf(const char *format, ...);
 void (*get_print_function(char s))(va_list);
 void print_char(va_list args);
 void print_string(va_list args);
