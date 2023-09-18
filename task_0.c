@@ -6,12 +6,11 @@
  * return: 1 if success
 */
 
-int print_char(va_list args)
+void print_char(va_list args)
 {
 char s;
 s = va_arg(args, int);
 write(1, &s, 1);
-return (1);
 }
 /**
  * print_string - print a string
@@ -19,12 +18,11 @@ return (1);
  * return: 1 if success
 */
 
-int print_string(va_list args)
+void print_string(va_list args)
 {
 int len;
 char *s = va_arg(args, char *);
 printf("enter print_sting");
 len = strlen(s);
 write(1, &s, len);
-return (1);
 }

@@ -7,7 +7,7 @@
  * Return: returns a pointer to the function that
  * corresponds to the operator given as a parameter
  */
-int (*get_print_function(char s))(va_list)
+void (*get_print_function(char s))(va_list)
 {
 specifiers_t specifiers[] = {
 {'c', print_char},
@@ -24,5 +24,5 @@ return (specifiers[i].f);
 }
 i++;
 }
-return (0);
+return (NULL);
 }
