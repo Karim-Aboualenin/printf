@@ -21,6 +21,7 @@ if (specifiers[i].specifier == s)
 {
 printf("%d",i);
 return (specifiers[i].func);
+printf("NOPE")
 }
 i++;
 }
