@@ -20,7 +20,7 @@ while (specifiers[i].specifier != '\0')
 if (specifiers[i].specifier == s)
 {
 printf("%d",i);
-return (specifiers[i].f);
+return (specifiers[i].func);
 }
 i++;
 }

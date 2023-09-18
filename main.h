@@ -17,7 +17,7 @@
 typedef struct specifiers
 {
 char specifier;
-void (*f)(va_list);
+void (*func)(va_list);
 } specifiers_t;
 
 int _printf(const char *format, ...);
