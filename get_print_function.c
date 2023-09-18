@@ -23,5 +23,5 @@ return (specifiers[i].func);
 }
 i++;
 }
-return (0);
+return (NULL);
 }
