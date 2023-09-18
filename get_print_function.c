@@ -19,7 +19,7 @@ while (specifiers[i].specifier != '\0')
 {
 if (specifiers[i].specifier == s)
 {
-printf("%p",(void *)specifiers[i].f);
+printf("%d",i);
 return (specifiers[i].f);
 }
 i++;
