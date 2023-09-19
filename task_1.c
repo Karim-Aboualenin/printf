@@ -29,14 +29,14 @@ return (len);
 }
 if (num < 0)
 {
-len = len +10;
+len++;
 temp = '-';
 write(1, &temp, 1);
 num = -num;
 }
 if (num > 9)
 {
-len = print_number(num / 10);
+len += print_number(num / 10);
 }
 temp = num % 10 + '0';
 write(1, &temp, 1);
