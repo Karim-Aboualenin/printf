@@ -14,6 +14,8 @@
 #define F_HASH 8
 #define F_SPACE 16
 
+#define S_LONG 2
+#define S_SHORT 1
 /**
  * struct specifiers - Struct to choose the right print function
  * @specifier: The specifer
@@ -33,5 +35,9 @@ int _printf(const char *format, ...);
 int (*get_print_function(char s))(va_list);
 int print_char(va_list args);
 int print_string(va_list args);
-int get_flags (const char *format, int *i);
+int get_flag (const char *format, int *i);
+int get_width(const char *format, int *i, va_list list);
+int get_precision(const char *format, int *i, va_list list);
+int get_size(const char *format, int *i);
+
 #endif
