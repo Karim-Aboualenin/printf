@@ -30,9 +30,10 @@ length++;
 }
 while (num > 0)
 {
-binary[i] = num % 2;
+binary[i] = (num % 2) + '0';
 num /= 2;
 length++;
+i++;
 }
 write(1, binary, length);
 return(length);
