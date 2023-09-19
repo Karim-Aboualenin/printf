@@ -54,4 +54,3 @@ write(1, &temp, 1);
 len++;
 return (len);
 }
- 
