@@ -20,6 +20,17 @@ int print_number(int num)
 {
 int len = 0;
 char temp;
+if (num == INT_MIN)
+{
+temp = '-';
+write(1, &temp, 1);
+len++;
+temp = '2';
+write(1, &temp, 1);
+len++;
+num %= 1000000000;
+num = -num;
+}
 if (num == 0)
 {
 temp = '0';
