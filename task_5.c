@@ -17,13 +17,13 @@ for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] >= 32 && s[i] < 127)
 {
-write (1, &s[i], 1);
+write(1, &s[i], 1);
 len++;
 }
 else if (s[i] > 14)
 len += _printf("\\x%X", s[i]);
 else
-len +=_printf("\\x0%X", s[i]);
+len += _printf("\\x0%X", s[i]);
 }
 return (len);
 }

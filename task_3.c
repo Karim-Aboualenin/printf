@@ -7,12 +7,12 @@
 
 int convert_unsigned(va_list args)
 {
-unsigned num = va_arg(args, unsigned int);
+unsigned int num = va_arg(args, unsigned int);
 return (print_unsigned(num));
 }
 /**
  * print_unsigned - print an unsigned integer
- * @num: the number
+ * @uns_num: the number
  * Return: number of characters in the  integer
 */
 
