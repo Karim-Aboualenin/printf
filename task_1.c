@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * convert_int - take an argument and turn to number
  * @args: the list contain characters
@@ -23,8 +24,9 @@ if (num == 0)
 {
 write(1, '0', 1);
 len++;
+return (len);
 }
-else if (num < 0)
+if (num < 0)
 {
 write(1, '-', 1);
 num = -num;
@@ -38,4 +40,6 @@ len = print_number(num / 10);
 }
 temp = num % 10 + '0';
 write(1, &temp, 1);
+len++;
+return (len);
 }
