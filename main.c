@@ -10,9 +10,8 @@
 int main(void)
 {
   int len;
-  int len2;
 len = _printf("%!\n");
-len2 = printf("%!\n");
-printf("Length:[%d, %i]\n", len, len2);
+/*len2 = printf("%!\n");*/
+printf("Length:[%d, %i]\n", len);
 return(0);
 }
