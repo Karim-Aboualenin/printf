@@ -29,10 +29,10 @@ return (len);
 }
 if (num < 0)
 {
+len += 2;
 temp = '-';
 write(1, &temp, 1);
 num = -num;
-len += 2;
 }
 if (num > 9)
 {
