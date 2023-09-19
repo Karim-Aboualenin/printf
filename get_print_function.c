@@ -15,6 +15,7 @@ specifiers_t specifiers[] = {
 {'i', convert_int},
 {'d', convert_int},
 {'b', print_binary},
+{'u', convert_unsigned},
 {'\0', NULL}
 };
 int i = 0;
