@@ -12,6 +12,8 @@ int (*get_print_function(char s))(va_list)
 specifiers_t specifiers[] = {
 {'c', print_char},
 {'s', print_string},
+{'i', convert_int},
+{'d', convert_int},
 {'\0', NULL}
 };
 int i = 0;
