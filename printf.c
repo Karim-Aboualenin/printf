@@ -36,11 +36,6 @@ else if (format[i] == '\0')
 va_end(args);
 return (-1);
 }
-else if (format[i] != 'c' && format[i] != 's')
-{
-va_end(args);
-return (-1);
-}
 else
 {
 func = get_print_function(format[i]);
