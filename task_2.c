@@ -9,7 +9,7 @@ int print_binary(va_list args)
 {
 int num;
 char temp;
-int length, i = 0;
+int length = 0, i = 0;
 char *binary;
 num = va_arg(args, int);
 binary = malloc(sizeof(char) * 32);
