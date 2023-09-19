@@ -19,7 +19,7 @@
 /**
  * struct specifiers - Struct to choose the right print function
  * @specifier: The specifer
- * @f: The function associated
+ * @func: The function associated
  */
 
 typedef struct specifiers
@@ -28,7 +28,7 @@ char specifier;
 int (*func)(va_list);
 } specifiers_t;
 
-int _strlen(char *s);	
+int _strlen(char *s);
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 		va_list list, char buffer[], int flags, int width, int precision, int size);
@@ -37,7 +37,7 @@ int _printf(const char *format, ...);
 int (*get_print_function(char s))(va_list);
 int print_char(va_list args);
 int print_string(va_list args);
-int get_flag (const char *format, int *i);
+int get_flag(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
