@@ -22,9 +22,9 @@ temp = 0 + '0';
 write(1, &temp, 1);
 return (1);
 }
-if (num < 0)
+/*if (num < 0)
 {
-/*binary[i] = 1 + '0';
+binary[i] = 1 + '0';
 i++;
 num = -num;
 length++;
