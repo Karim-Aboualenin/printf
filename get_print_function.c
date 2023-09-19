@@ -14,7 +14,7 @@ specifiers_t specifiers[] = {
 {'s', print_string},
 {'i', convert_int},
 {'d', convert_int},
-{'b', print_binary}
+{'b', print_binary},
 {'\0', NULL}
 };
 int i = 0;

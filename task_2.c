@@ -23,10 +23,14 @@ if (num < 0)
 binary[i] = 1 + '0' ;
 i++;
 num = -num;
+length++;
 }
 while (num > 0)
 {
 binary[i] = num % 2;
+num /= 2;
+length++;
 }
-
+write(1, binary, length);
+return(length);
 }
