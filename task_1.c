@@ -34,12 +34,9 @@ write(1, &temp, 1);
 num = -num;
 len++;
 }
-else
-{
 if (num > 9)
 {
 len = print_number(num / 10);
-}
 }
 temp = num % 10 + '0';
 write(1, &temp, 1);
