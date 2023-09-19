@@ -32,7 +32,7 @@ if (num < 0)
 temp = '-';
 write(1, &temp, 1);
 num = -num;
-len++;
+len += 2;
 }
 if (num > 9)
 {
