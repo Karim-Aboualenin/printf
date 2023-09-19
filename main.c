@@ -1,5 +1,3 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,9 +7,6 @@
  */
 int main(void)
 {
-  int len;
-len = _printf("%!\n");
-/*len2 = printf("%!\n");*/
-printf("Length:[%d]\n", len);
-return(0);
+    _printf("%b\n", 98);
+    return (0);
 }
