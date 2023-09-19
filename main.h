@@ -11,7 +11,7 @@
 /**
  * struct specifiers - Struct to choose the right print function
  * @specifier: The specifer
- * @f: The function associated
+ * @func: The function associated
  */
 
 typedef struct specifiers
