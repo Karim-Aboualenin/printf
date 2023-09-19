@@ -22,13 +22,15 @@ int len = 0;
 char temp;
 if (num == 0)
 {
-write(1, '0', 1);
+temp = '0';
+write(1, &temp, 1);
 len++;
 return (len);
 }
 if (num < 0)
 {
-write(1, '-', 1);
+temp = '-';
+write(1, &temp, 1);
 num = -num;
 len++;
 }
