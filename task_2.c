@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- *
  * print_binary - take an argument and turn to binary
  * @args: the list contain characters
  * Return: number of characters in the binary
 */
 int print_binary(va_list args)
 {
-unsigned num;
+unsigned int num;
 char temp;
 int length = 0, i = 0;
 char *binary;
