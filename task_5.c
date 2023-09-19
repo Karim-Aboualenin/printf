@@ -13,8 +13,6 @@ int print_STRING(va_list args)
 {
 int len, i;
 char *s = va_arg(args, char *);
-if (s == NULL)
-s = "(null)";
 len = _strlen(s);
 for (i = 0; i < len; i++)
 {
@@ -22,8 +20,7 @@ if (s[i] >= 32 && s[i] < 127)
 {
 write (1, &s[i], 1);
 }
-else if (s[i] > 15
-)
+else if (s[i] > 14)
 _printf("\\x%X", s[i]);
 else
 _printf("\\x0%X", s[i]);
