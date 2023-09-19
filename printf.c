@@ -29,7 +29,7 @@ i++;
 if (format[i] == '%')
 {
 write(1, &format[i], 1);
-i++, length++;
+i++, length += 2;
 }
 else if (format[i] == '\0')
 {
