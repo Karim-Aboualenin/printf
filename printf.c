@@ -2,11 +2,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/* Function prototypes for handling each specifier */
-static void print_char(va_list args, int *count);
-static void print_string(va_list args, int *count);
-static void print_integer(va_list args, int *count);
-
 /**
  * _printf - Custom printf function with limited functionality.
  * @format: The format string.
