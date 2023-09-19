@@ -31,4 +31,3 @@ len = _strlen(s);
 write(1, s, len);
 return (len);
 }
- 
