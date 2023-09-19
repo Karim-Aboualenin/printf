@@ -11,19 +11,19 @@
 
 int print_STRING(va_list args)
 {
-int len, i;
+int len = 0, i;
 char *s = va_arg(args, char *);
-len = _strlen(s);
 for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] >= 32 && s[i] < 127)
 {
 write (1, &s[i], 1);
+len++;
 }
 else if (s[i] > 14)
-_printf("\\x%X", s[i]);
+len += _printf("\\x%X", s[i]);
 else
-_printf("\\x0%X", s[i]);
+len +=_printf("\\x0%X", s[i]);
 }
 return (len);
 }
