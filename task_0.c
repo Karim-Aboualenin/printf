@@ -8,11 +8,11 @@
 
 int print_char(va_list args)
 {
-/*char s;
+char s;
 s = va_arg(args, int);
 if (s == 0)
 s = '\0';
-write(1, &s, 1);*/
+/*write(1, &s, 1);*/
 return (1);
 }
 /**
