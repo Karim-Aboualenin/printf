@@ -22,7 +22,8 @@ if (s[i] >= 32 && s[i] < 127)
 {
 write (1, &s[i], 1);
 }
-else if (s[i] > 14)
+else if (s[i] > 15
+)
 _printf("\\x%X", s[i]);
 else
 _printf("\\x0%X", s[i]);
