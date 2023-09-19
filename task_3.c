@@ -7,7 +7,7 @@
 
 int convert_unsigned(va_list args)
 {
-int num = va_arg(args, unsigned int);
+unsigned num = va_arg(args, unsigned int);
 return (print_unsigned(num));
 }
 /**
@@ -16,7 +16,7 @@ return (print_unsigned(num));
  * Return: number of characters in the  integer
 */
 
-int print_number(int uns_num)
+int print_unsigned(unsigned int uns_num)
 {
 int len = 0;
 char temp;

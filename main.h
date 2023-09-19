@@ -30,6 +30,6 @@ int print_number(int number);
 int print_binary(va_list args);
 void reverse_array(char *a, int n);
 int convert_unsigned(va_list args);
-int print_unsigned(int un_num);
+int print_unsigned(unsigned int un_num);
 
 #endif
