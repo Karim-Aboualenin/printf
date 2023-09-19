@@ -29,9 +29,14 @@ i++;
 if (format[i] == '%')
 {
 write(1, &format[i], 1);
-i++, length += 2;
+i++, length++;
 }
 else if (format[i] == '\0')
+{
+va_end(args);
+return (-1);
+}
+else if (format[i] != 'c' && format[i] != 's')
 {
 va_end(args);
 return (-1);
