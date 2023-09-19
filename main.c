@@ -12,6 +12,6 @@ int main(void)
   int len;
 len = _printf("%!\n");
 /*len2 = printf("%!\n");*/
-printf("Length:[%d, %i]\n", len);
+printf("Length:[%d]\n", len);
 return(0);
 }
