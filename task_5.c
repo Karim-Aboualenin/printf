@@ -14,7 +14,7 @@ int print_STRING(va_list args)
 int len, i;
 char *s = va_arg(args, char *);
 len = _strlen(s);
-for (i = 0; i < len; i++)
+for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] >= 32 && s[i] < 127)
 {
