@@ -7,11 +7,14 @@
 */
 int print_binary(va_list args)
 {
-unsigned int num;
+int num;
 char temp;
 int length, i = 0;
 char *binary;
-num = va_arg(args, unsigned int);
+num = va_arg(args, int);
+binary = malloc(sizeof(char) * 32);
+if (binary == NULL)
+return (0);
 if (num == 0)
 {
 temp = 0 + '0';
