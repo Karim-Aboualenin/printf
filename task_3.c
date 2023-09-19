@@ -77,9 +77,9 @@ return (length);
 */
 int print_hexa(va_list args)
 {
-unsigned int num;
+unsigned int num, result;
 char temp;
-int length = 0, i = 0, result;
+int length = 0, i = 0;
 char *hexa;
 num = va_arg(args, int);
 hexa = malloc(sizeof(char) * 33);
@@ -94,8 +94,10 @@ return (1);
 while (num > 0)
 {
 result = num % 16;
-if (num < 10)
+if (result < 10)
+{
 hexa[i] = result + '0';
+}
 else
 hexa[i] = 'a' + (result - 10);
 num /= 16;
@@ -131,7 +133,7 @@ return (1);
 while (num > 0)
 {
 result = num % 16;
-if (num < 10)
+if (result < 10)
 hexa[i] = result + '0';
 else
 hexa[i] = 'A' + (result - 10);
