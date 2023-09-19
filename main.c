@@ -11,7 +11,7 @@ int main(void)
     int len2;
     unsigned int ui;
         ui = (unsigned int)INT_MAX + 1024;
-    len =_printf("Unsigned:[%u]\n", ui);
+    len = _printf("Unsigned:[%u]\n", ui);
     len2 =printf("Unsigned:[%u]\n", ui);
-    printf("Length:[%d, %i]\n", len2, len2);
+    printf("Length:[%d, %i]\n", len, len2);
 }
