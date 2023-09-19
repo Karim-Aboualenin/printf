@@ -14,4 +14,5 @@ int main(void)
     len = _printf("Unsigned:[%u]\n", ui);
     len2 =printf("Unsigned:[%u]\n", ui);
     printf("Length:[%d, %i]\n", len, len2);
+    return (0);
 }
