@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * 
+ *
  * print_binary - take an argument and turn to binary
- * @
+ * @args: the list contain characters
+ * Return: number of characters in the binary
 */
 int print_binary(va_list args)
 {
@@ -23,7 +24,7 @@ return (1);
 }
 if (num < 0)
 {
-binary[i] = 1 + '0' ;
+binary[i] = 1 + '0';
 i++;
 num = -num;
 length++;
@@ -37,5 +38,5 @@ i++;
 }
 reverse_array(binary, length);
 write(1, binary, length);
-return(length);
+return (length);
 }
