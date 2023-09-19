@@ -15,7 +15,7 @@ specifiers_t specifiers[] = {
 {'i', convert_int},
 {'d', convert_int},
 {'b', print_binary},
-{'u', convert_unsign},
+{'u', convert_unsigned},
 {'o', print_octal},
 {'x', print_hexa},
 {'X', print_Hexa},
