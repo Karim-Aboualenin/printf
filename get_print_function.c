@@ -16,6 +16,9 @@ specifiers_t specifiers[] = {
 {'d', convert_int},
 {'b', print_binary},
 {'u', convert_unsigned},
+{'o', print_octal},
+{'x', print_hexa},
+{'X', print_Hexa},
 {'\0', NULL}
 };
 int i = 0;
