@@ -19,6 +19,7 @@ specifiers_t specifiers[] = {
 {'o', print_octal},
 {'x', print_hexa},
 {'X', print_Hexa},
+{'S', print_STRING},
 {'\0', NULL}
 };
 int i = 0;
