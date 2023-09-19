@@ -29,7 +29,7 @@ return (len);
 }
 if (num < 0)
 {
-len += 10;
+len = len +10;
 temp = '-';
 write(1, &temp, 1);
 num = -num;
