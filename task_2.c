@@ -8,12 +8,12 @@
 */
 int print_binary(va_list args)
 {
-int num;
+unsigned num;
 char temp;
 int length = 0, i = 0;
 char *binary;
 num = va_arg(args, int);
-binary = malloc(sizeof(char) * 32);
+binary = malloc(sizeof(char) * 33);
 if (binary == NULL)
 return (0);
 if (num == 0)
@@ -24,11 +24,11 @@ return (1);
 }
 if (num < 0)
 {
-binary[i] = 1 + '0';
+/*binary[i] = 1 + '0';
 i++;
 num = -num;
 length++;
-}
+}*/
 while (num > 0)
 {
 binary[i] = (num % 2) + '0';
