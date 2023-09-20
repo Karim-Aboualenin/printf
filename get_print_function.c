@@ -21,6 +21,7 @@ specifiers_t specifiers[] = {
 {'X', print_Hexa},
 {'S', print_STRING},
 {'p', print_pointer},
+{'r', print_reverse}
 {'\0', NULL}
 };
 int i = 0;
