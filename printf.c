@@ -4,10 +4,10 @@
  * print_prcentage - print precentage sign
  * Return: Nothing
 */
-void print_prcentage (void)
+void print_prcentage(void)
 {
 char temp = '%';
-write (1, &temp, 1);
+write(1, &temp, 1);
 }
 
 
