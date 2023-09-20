@@ -7,12 +7,12 @@
 
 int print_reverse(va_list args)
 {
-int len;
+int len, i = 0;
 char *s = va_arg(args, char *);
 if (s == NULL)
 s = "(null)";
 len = _strlen(s);
-reverse_array(s, len);
-write(1, s, len);
+for (i = len - 1; i >= 0; i--)
+write(1, &s[i], 1);
 return (len);
 }
