@@ -11,6 +11,7 @@
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0, length_return = 0;
+char temp;
 int (*func)(va_list);
 va_list args;
 if (format == NULL)
@@ -31,16 +32,25 @@ if (format[i] == '%')
 write(1, &format[i], 1);
 i++, length++;
 }
-/*else if (format[i] == '\0')
+else if (format[i] == '\0')
 {
 return (-1);
-}*/
+}
 else
 {
 func = get_print_function(format[i]);
+if (func == NULL)
+{
+temp = '%';
+write(1, &temp, 1);
+write(1, &format[i], 1);
+length +=2;
+}
+else
+{
 length_return = func(args);
 i++;
 length += length_return;
-}}}
+}}}}
 return (length);
 }
