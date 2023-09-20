@@ -27,3 +27,4 @@ len += _printf("\\x0%X", s[i]);
 }
 return (len);
 }
+
