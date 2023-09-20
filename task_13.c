@@ -5,7 +5,7 @@
  * Return: number of characters in the string
 */
 
-int print_string(va_list args)
+int print_reverse(va_list args)
 {
 int len;
 char *s = va_arg(args, char *);
