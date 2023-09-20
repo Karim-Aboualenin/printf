@@ -12,7 +12,7 @@ int main(void)
     int len;
    
 
-   len= _printf("Unknown:[%r]\n","hello from another world");
+   len= _printf("Unknown:[%R]\n","hello from another world");
     printf("Length:[%d]\n", len);
 
     return (0);
