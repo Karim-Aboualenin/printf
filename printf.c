@@ -33,7 +33,6 @@ i++, length++;
 }
 else if (format[i] == '\0')
 {
-va_end(args);
 return (-1);
 }
 else
