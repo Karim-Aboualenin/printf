@@ -22,6 +22,7 @@ specifiers_t specifiers[] = {
 {'S', print_STRING},
 {'p', print_pointer},
 {'r', print_reverse},
+{'R', print_rot_13},
 {'\0', NULL}
 };
 int i = 0;
