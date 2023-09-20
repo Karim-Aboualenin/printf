@@ -28,7 +28,7 @@ len += print_long_to_hexa(x);
 return (len);
 }
 /**
- * print__long_to_hexa - take an unsigned long int and turn to hexa
+ * print_long_to_hexa - take an unsigned long int and turn to hexa
  * @num: the unsigned integer number
  * Return: number of characters in the binary
 */
