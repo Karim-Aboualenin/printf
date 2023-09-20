@@ -39,7 +39,6 @@ int print_pointer(va_list args);
 int print_long_to_hexa(unsigned long int num);
 int print_reverse(va_list args);
 int print_rot_13(va_list args);
-char *rot13(char *s);
-void print_prcentage (void);
+void print_prcentage(void);
 
 #endif
