@@ -10,7 +10,6 @@
 
 int _printf(const char *format, ...)
 {
-char temp;
 int i = 0, length = 0, length_return = 0;
 int (*func)(va_list);
 va_list args;
@@ -39,8 +38,7 @@ else
 func = get_print_function(format[i]);
 if (func == NULL)
 {
-temp = '%';
-write(1, &temp, 1);
+print_prcentage();
 length++;
 }
 else
@@ -50,4 +48,14 @@ i++;
 length += length_return;
 }}}}
 return (length);
+}
+
+/**
+ * print_prcentage - print precentage sign
+ * Return: Nothing
+*/
+void print_prcentage ()
+{
+char temp = '%';
+write (1, &temp, 1);
 }
