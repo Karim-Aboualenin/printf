@@ -31,10 +31,10 @@ if (format[i] == '%')
 write(1, &format[i], 1);
 i++, length++;
 }
-else if (format[i] == '\0')
+/*else if (format[i] == '\0')
 {
 return (-1);
-}
+}*/
 else
 {
 func = get_print_function(format[i]);
