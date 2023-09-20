@@ -10,6 +10,7 @@
 
 int _printf(const char *format, ...)
 {
+char temp;
 int i = 0, length = 0, length_return = 0;
 int (*func)(va_list);
 va_list args;
@@ -32,15 +33,15 @@ write(1, &format[i], 1);
 i++, length++;
 }
 else if (format[i] == '\0')
-{
 return (-1);
-}
 else
 {
 func = get_print_function(format[i]);
 if (func == NULL)
 {
-return (-1);
+temp = '%';
+write(1, &temp, 1);
+length++;
 }
 else
 {
