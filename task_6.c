@@ -29,12 +29,8 @@ return (len);
 }
 /**
  * print_long_to_hexa - take an unsigned long int and turn to hexa
-<<<<<<< HEAD
- * @args: the list contain characters
+ * @args: thge list contain characters
  * @num: ...
-=======
- * @num: the unsigned integer number
->>>>>>> 72320a4e097aa67b90e8cf1de93f1fa1ffbc859d
  * Return: number of characters in the binary
 */
 int print_long_to_hexa(unsigned long int num)
