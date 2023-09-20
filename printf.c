@@ -1,6 +1,17 @@
 #include "main.h"
 
 /**
+ * print_prcentage - print precentage sign
+ * Return: Nothing
+*/
+void print_prcentage (void)
+{
+char temp = '%';
+write (1, &temp, 1);
+}
+
+
+/**
  * _printf - a function that produces output according to a format.
  * @format: is a character string. The format string is
  * composed of zero or more directives
@@ -48,14 +59,4 @@ i++;
 length += length_return;
 }}}}
 return (length);
-}
-
-/**
- * print_prcentage - print precentage sign
- * Return: Nothing
-*/
-void print_prcentage ()
-{
-char temp = '%';
-write (1, &temp, 1);
 }
