@@ -20,6 +20,7 @@ specifiers_t specifiers[] = {
 {'x', print_hexa},
 {'X', print_Hexa},
 {'S', print_STRING},
+{'p', print_pointer},
 {'\0', NULL}
 };
 int i = 0;
