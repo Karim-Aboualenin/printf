@@ -15,7 +15,7 @@ unsigned long x;
 p = va_arg(args, void *);
 if (p == NULL)
 {
-temp = ("nil");
+temp = "(nil)";
 len = _strlen(temp);
 write(1, temp, len);
 return (len);
