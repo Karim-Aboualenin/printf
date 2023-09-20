@@ -36,5 +36,6 @@ int print_hexa(va_list args);
 int print_Hexa(va_list args);
 int print_STRING(va_list args);
 int print_pointer(va_list args);
+int print_long_to_hexa(unsigned long int num);
 
 #endif

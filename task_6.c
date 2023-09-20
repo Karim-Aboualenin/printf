@@ -9,44 +9,58 @@
 int print_pointer(va_list args)
 {
 void *p;
-char *temp = ("nil");
-int len = 0, result, i = 0;
+char *temp;
+int len = 0;
 unsigned long x;
-char zero;
-char *hexa = malloc(sizeof(char) * 33);
-if (hexa == NULL)
-return (0);
 p = va_arg(args, void *);
 if (p == NULL)
 {
-free (hexa);
+temp = ("nil");
 len = _strlen(temp);
 write(1, temp, len);
 return (len);
 }
 temp = "0x";
-write (1, &temp, 2);
+write (1, temp, 2);
 len = 2;
 x = (unsigned long)p;
-if (x == 0)
-{
-zero = 0 + '0';
-write(1, &zero, 1);
-len++;
+len += print_long_to_hexa(x);
 return (len);
 }
-while (x > 0)
+/**
+ * print_hexa - take an unsigned long int and turn to hexa
+ * @args: the list contain characters
+ * Return: number of characters in the binary
+*/
+int print_long_to_hexa(unsigned long int num)
 {
-result = x % 16;
+unsigned int result;
+char temp;
+int length = 0, i = 0;
+char *hexa;
+hexa = malloc(sizeof(char) * 33);
+if (hexa == NULL)
+return (0);
+if (num == 0)
+{
+temp = 0 + '0';
+write(1, &temp, 1);
+return (1);
+}
+while (num > 0)
+{
+result = num % 16;
 if (result < 10)
+{
 hexa[i] = result + '0';
+}
 else
-hexa[i] = 'A' + (result - 10);
-x /= 16;
-len++;
+hexa[i] = 'a' + (result - 10);
+num /= 16;
+length++;
 i++;
 }
-reverse_array(hexa, len);
-write(1, hexa, len - 2);
-return (len);
+reverse_array(hexa, length);
+write(1, hexa, length);
+return (length);
 }
