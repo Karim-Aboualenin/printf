@@ -32,4 +32,3 @@ reverse_array(binary, length);
 write(1, binary, length);
 return (length);
 }
- 
