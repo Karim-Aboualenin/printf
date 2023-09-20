@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_address - print a addres
+ * print_pointer - print a addres
  * @args: the list contain characters
  * Return: number of characters in the address
 */
@@ -21,7 +21,7 @@ write(1, temp, len);
 return (len);
 }
 temp = "0x";
-write (1, temp, 2);
+write(1, temp, 2);
 len = 2;
 x = (unsigned long)p;
 len += print_long_to_hexa(x);
