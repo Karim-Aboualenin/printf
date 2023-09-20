@@ -29,8 +29,7 @@ return (len);
 }
 /**
  * print_long_to_hexa - take an unsigned long int and turn to hexa
- * @args: thge list contain characters
- * @num: ...
+ * @num: thge number contain characters
  * Return: number of characters in the binary
 */
 int print_long_to_hexa(unsigned long int num)
