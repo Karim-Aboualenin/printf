@@ -11,7 +11,6 @@
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0, length_return = 0;
-char temp;
 int (*func)(va_list);
 va_list args;
 if (format == NULL)
@@ -41,10 +40,7 @@ else
 func = get_print_function(format[i]);
 if (func == NULL)
 {
-temp = '%';
-write(1, &temp, 1);
-write(1, &format[i], 1);
-length +=2;
+return (-1);
 }
 else
 {
