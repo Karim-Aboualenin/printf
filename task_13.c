@@ -2,6 +2,7 @@
 /**
  * print_reverse - print a reversed string
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the string
 */
 

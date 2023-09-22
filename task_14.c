@@ -3,6 +3,7 @@
 /**
  * print_rot_13 - prints the rot13'ed string
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the string
 */
 int print_rot_13(va_list args, flags_t *flags)

@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * 
+ * get_flag - get the flag after %
+ * @c: the character after %
+ * @flag: the flag
 */
 int get_flag(char c, flags_t *flag)
 {

@@ -2,6 +2,7 @@
 /**
  * convert_int - take an argument and turn to number
  * @args: the list contain characters
+ * @flags: the flags
  * Return: the number of characters in the number
 */
 
@@ -16,7 +17,7 @@ temp = '+';
 write(1, &temp, 1);
 length++;
 }
-else if(flags->space == 1 && num >= 0)
+else if (flags->space == 1 && num >= 0)
 {
 temp = ' ';
 write(1, &temp, 1);

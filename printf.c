@@ -9,7 +9,7 @@ char temp = '%';
 write(1, &temp, 1);
 }
 /**
- * flags_restared - put all flags equal zero again
+ * flags_restarted - put all flags equal zero again
  * @flags: the flags
  * return: nothing
 */
@@ -24,6 +24,7 @@ flags->space = 0;
  * @format: is a character string. The format string is
  * composed of zero or more directives
  * @i: index
+ * @args: the list contain characters
  * @flags: the flags
  * Return: length that added to printed string
 */
@@ -68,7 +69,7 @@ va_start(args, format);
 while (format[i] != '\0')
 {
 flags_restarted(&flags);
- if (format[i] != '%')
+if (format[i] != '%')
 {
 write(1, &format[i], 1);
 i++, length++;

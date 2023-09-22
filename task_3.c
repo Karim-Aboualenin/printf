@@ -2,6 +2,7 @@
 /**
  * convert_unsigned - take an argument and turn to unsigned number
  * @args: the list contain characters
+ * @flags: the flags
  * Return: the number of characters in the unsigned number
 */
 
@@ -42,6 +43,7 @@ return (len);
 /**
  * print_octal - take an argument and turn to octal
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the binary
 */
 int print_octal(va_list args, flags_t *flags)
@@ -80,6 +82,7 @@ return (length);
 /**
  * print_hexa - take an argument and turn to hexa
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the binary
 */
 int print_hexa(va_list args, flags_t *flags)
@@ -125,6 +128,7 @@ return (length);
 /**
  * print_Hexa - take an argument and turn to hexa
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the binary
 */
 int print_Hexa(va_list args, flags_t *flags)

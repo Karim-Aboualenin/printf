@@ -3,6 +3,7 @@
 /**
  * print_binary - take an argument and turn to binary
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the binary
 */
 int print_binary(va_list args, flags_t *flags)

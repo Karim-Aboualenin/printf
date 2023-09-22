@@ -4,6 +4,7 @@
  * get_print_function - selects the correct function
  * to perform the right print function based on the specifier
  * @s: the operator passed as argument to the program
+ * @flags: the flags
  * Return: returns a pointer to the function that
  * corresponds to the operator given as a parameter
  */

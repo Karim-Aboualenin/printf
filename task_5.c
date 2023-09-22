@@ -6,6 +6,7 @@
  * printed this way: \x, followed by the
  * ASCII code value in hexadecimal
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the string
 */
 

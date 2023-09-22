@@ -3,6 +3,7 @@
 /**
  * print_pointer - print a addres
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the address
 */
 

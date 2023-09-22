@@ -8,16 +8,12 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/**
- * struct specifiers - Struct to choose the right print function
- * @specifier: The specifer
- * @func: The function associated
- */
 
 /**
  * struct flags - Struct to choose the right action based on the flag
- * @flags: The flag
- * @func: The function associated
+ * @plus: a flag is raised when + appear after %
+ * @space: a flag is raised when space appear after %
+ * @hash: a flag is raised when # appear after %
  */
 
 typedef struct flags
@@ -26,6 +22,12 @@ int plus;
 int space;
 int hash;
 } flags_t;
+
+/**
+ * struct specifiers - Struct to choose the right print function
+ * @specifier: The specifer
+ * @func: The function associated
+ */
 
 typedef struct specifiers
 {

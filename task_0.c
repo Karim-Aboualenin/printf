@@ -3,6 +3,7 @@
 /**
  * print_char - print a character
  * @args: the list contain characters
+ * @flags: the flags
  * Return: 1
 */
 
@@ -19,6 +20,7 @@ return (1);
 /**
  * print_string - print a string
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the string
 */
 
