@@ -54,7 +54,7 @@ int print_long_to_hexa(unsigned long int num);
 int print_reverse(va_list args, flags_t *flags);
 int print_rot_13(va_list args, flags_t *flags);
 void print_prcentage(void);
-int after_percentage(const char *format, int i, va_list args);
+int after_percentage(const char *format, int *i, va_list args, flags_t *flags);
 int get_flag(char c, flags_t *flag);
 
 #endif

@@ -20,6 +20,37 @@ flags->plus = 0;
 flags->space = 0;
 }
 /**
+ * after_percentage - a function that handle cases if % is found
+ * @format: is a character string. The format string is
+ * composed of zero or more directives
+ * @i: index
+ * @flags: the flags
+ * Return: length that added to printed string
+*/
+int after_percentage(const char *format, int *i, va_list args, flags_t *flags)
+{
+int length = 0;
+int (*func)(va_list, flags_t *);
+if (format[*i] == '%')
+{
+write(1, &format[*i], 1);
+length++;
+return (length);
+}
+if (format[*i] == '\0')
+return (-1);
+while (get_flag(format[*i], flags))
+i++;
+func = get_print_function(format[*i], flags);
+if (func == NULL)
+{
+print_prcentage();
+return (-2);
+}
+length = func(args, flags);
+return (length);
+}
+/**
  * _printf - a function that produces output according to a format.
  * @format: is a character string. The format string is
  * composed of zero or more directives
@@ -29,7 +60,6 @@ flags->space = 0;
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0, length_return = 0;
-int (*func)(va_list, flags_t *);
 flags_t flags = {0, 0, 0};
 va_list args;
 if (format == NULL)
@@ -55,19 +85,20 @@ else if (format[i] == '\0')
 return (-1);
 else
 {
-while (get_flag(format[i], &flags))
 i++;
-func = get_print_function(format[i], &flags);
-if (func == NULL)
+length_return = after_percentage(format, &i, args, &flags);
+if (length_return == -1)
+return (-1);
+if (length_return == -2)
 {
-print_prcentage();
 length++;
+continue;
 }
-else
-{
-length_return = func(args, &flags);
-i++;
 length += length_return;
-}}}}
+i++;
+}}
+return (length);
+}
+
 return (length);
 }
