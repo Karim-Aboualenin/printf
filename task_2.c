@@ -5,12 +5,13 @@
  * @args: the list contain characters
  * Return: number of characters in the binary
 */
-int print_binary(va_list args)
+int print_binary(va_list args, flags_t *flags)
 {
 unsigned int num;
 char temp;
 int length = 0, i = 0;
 char *binary;
+(void)flags;
 num = va_arg(args, int);
 binary = malloc(sizeof(char) * 33);
 if (binary == NULL)

@@ -6,12 +6,13 @@
  * Return: number of characters in the address
 */
 
-int print_pointer(va_list args)
+int print_pointer(va_list args, flags_t *flags)
 {
 void *p;
 char *temp;
 int len = 0;
 unsigned long x;
+(void)flags;
 p = va_arg(args, void *);
 if (p == NULL)
 {

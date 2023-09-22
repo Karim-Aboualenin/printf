@@ -5,10 +5,26 @@
  * Return: the number of characters in the number
 */
 
-int convert_int(va_list args)
+int convert_int(va_list args, flags_t *flags)
 {
 int num = va_arg(args, int);
-return (print_number(num));
+int length = 0;
+char temp;
+if (flags->plus == 1 && num >= 0)
+{
+temp = '+';
+write(1, &temp, 1);
+length++;
+}
+else if(flags->space == 1 && num >= 0)
+{
+temp = ' ';
+write(1, &temp, 1);
+length++;
+}
+
+length += print_number(num);
+return (length);
 }
 /**
  * print_number - print an integer

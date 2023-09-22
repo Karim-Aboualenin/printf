@@ -5,13 +5,14 @@
  * @args: the list contain characters
  * Return: number of characters in the string
 */
-int print_rot_13(va_list args)
+int print_rot_13(va_list args, flags_t *flags)
 {
 int len;
 int i = 0, j = 0;
 char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 char *s = va_arg(args, char *);
+(void)flags;
 if (s == NULL)
 s = "(null)";
 len = _strlen(s);

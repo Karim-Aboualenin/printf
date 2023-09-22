@@ -9,10 +9,11 @@
  * Return: number of characters in the string
 */
 
-int print_STRING(va_list args)
+int print_STRING(va_list args, flags_t *flags)
 {
 int len = 0, i;
 char *s = va_arg(args, char *);
+(void)flags;
 for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] >= 32 && s[i] < 127)

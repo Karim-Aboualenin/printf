@@ -5,9 +5,10 @@
  * Return: the number of characters in the unsigned number
 */
 
-int convert_unsigned(va_list args)
+int convert_unsigned(va_list args, flags_t *flags)
 {
 unsigned int num = va_arg(args, unsigned int);
+(void)flags;
 return (print_unsign(num));
 }
 /**
@@ -43,7 +44,7 @@ return (len);
  * @args: the list contain characters
  * Return: number of characters in the binary
 */
-int print_octal(va_list args)
+int print_octal(va_list args, flags_t *flags)
 {
 unsigned int num;
 char temp;
@@ -55,9 +56,15 @@ if (octal == NULL)
 return (0);
 if (num == 0)
 {
-temp = 0 + '0';
+temp = '0';
 write(1, &temp, 1);
 return (1);
+}
+if (flags->hash == 1)
+{
+temp = '0';
+write(1, &temp, 1);
+length++;
 }
 while (num > 0)
 {
@@ -75,21 +82,27 @@ return (length);
  * @args: the list contain characters
  * Return: number of characters in the binary
 */
-int print_hexa(va_list args)
+int print_hexa(va_list args, flags_t *flags)
 {
 unsigned int num, result;
 char temp;
 int length = 0, i = 0;
-char *hexa;
+char *hexa, *temp_2;
 num = va_arg(args, int);
 hexa = malloc(sizeof(char) * 33);
 if (hexa == NULL)
 return (0);
 if (num == 0)
 {
-temp = 0 + '0';
+temp = '0';
 write(1, &temp, 1);
 return (1);
+}
+if (flags->hash == 1)
+{
+temp_2 = "0x";
+write(1, temp_2, 2);
+length += 2;
 }
 while (num > 0)
 {
@@ -114,21 +127,27 @@ return (length);
  * @args: the list contain characters
  * Return: number of characters in the binary
 */
-int print_Hexa(va_list args)
+int print_Hexa(va_list args, flags_t *flags)
 {
 unsigned int num;
 char temp;
 int length = 0, i = 0, result;
-char *hexa;
+char *hexa, *temp_2;
 num = va_arg(args, int);
 hexa = malloc(sizeof(char) * 33);
 if (hexa == NULL)
 return (0);
 if (num == 0)
 {
-temp = 0 + '0';
+temp = '0';
 write(1, &temp, 1);
 return (1);
+}
+if (flags->hash == 1)
+{
+temp_2 = "0X";
+write(1, temp_2, 2);
+length += 2;
 }
 while (num > 0)
 {

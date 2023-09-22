@@ -6,9 +6,10 @@
  * Return: 1
 */
 
-int print_char(va_list args)
+int print_char(va_list args, flags_t *flags)
 {
 char s;
+(void)flags;
 s = va_arg(args, int);
 if (s == 0)
 s = '\0';
@@ -21,10 +22,11 @@ return (1);
  * Return: number of characters in the string
 */
 
-int print_string(va_list args)
+int print_string(va_list args, flags_t *flags)
 {
 int len;
 char *s = va_arg(args, char *);
+(void)flags;
 if (s == NULL)
 s = "(null)";
 len = _strlen(s);
