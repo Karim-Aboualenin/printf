@@ -16,9 +16,22 @@
 
 typedef struct specifiers
 {
-char specifier;
-int (*func)(va_list);
+char flag;
+int (*func)(char c);
 } specifiers_t;
+
+/**
+ * struct flags - Struct to choose the right action based on the flag
+ * @flags: The flag
+ * @func: The function associated
+ */
+
+typedef struct flags
+{
+int plus;
+int space;
+int hash;
+} flags_t;
 
 int _strlen(char *s);
 int _printf(const char *format, ...);
@@ -40,6 +53,6 @@ int print_long_to_hexa(unsigned long int num);
 int print_reverse(va_list args);
 int print_rot_13(va_list args);
 void print_prcentage(void);
-int after_percentage(char c, va_list args);
+int after_percentage(const char *format, int i, va_list args);
 
 #endif
