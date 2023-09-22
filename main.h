@@ -40,5 +40,6 @@ int print_long_to_hexa(unsigned long int num);
 int print_reverse(va_list args);
 int print_rot_13(va_list args);
 void print_prcentage(void);
+int after_percentage(char c, va_list args);
 
 #endif

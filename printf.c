@@ -10,9 +10,9 @@ char temp = '%';
 write(1, &temp, 1);
 }
 /**
- * after_precentage - a function that handle cases if % is found
- * c: the char after percentage
- * args: the list contain characters
+ * after_percentage - a function that handle cases if % is found
+ * @c: the char after percentage
+ * @args: the list contain characters
  * Return: length that added to printed string
 */
 int after_percentage(char c, va_list args)
@@ -23,7 +23,7 @@ if (c == '%')
 {
 write(1, &c, 1);
 length++;
-return(length);
+return (length);
 }
 if (c == '\0')
 return (-1);
@@ -32,9 +32,10 @@ if (func == NULL)
 {
 print_prcentage();
 length++;
+return (1);
 }
 length = func(args);
-return(length);
+return (length);
 }
 /**
  * _printf - a function that produces output according to a format.
