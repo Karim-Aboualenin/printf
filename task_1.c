@@ -23,9 +23,9 @@ temp = ' ';
 write(1, &temp, 1);
 length++;
 }
-if(flags->l == 1)
+if (flags->l == 1)
 num = (long int)num;
-else if(flags->h == 1)
+else if (flags->h == 1)
 num = (short int)num;
 length += print_number(num);
 return (length);

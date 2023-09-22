@@ -9,9 +9,9 @@
 int convert_unsigned(va_list args, flags_t *flags)
 {
 unsigned int num = va_arg(args, unsigned int);
-if(flags->l == 1)
+if (flags->l == 1)
 num = (unsigned long int)num;
-else if(flags->h == 1)
+else if (flags->h == 1)
 num = (unsigned short int)num;
 return (print_unsign(num));
 }
@@ -71,9 +71,9 @@ temp = '0';
 write(1, &temp, 1);
 length++;
 }
-if(flags->l == 1)
+if (flags->l == 1)
 num = (unsigned long int)num;
-else if(flags->h == 1)
+else if (flags->h == 1)
 num = (unsigned short int)num;
 while (num > 0)
 {
@@ -114,9 +114,9 @@ temp_2 = "0x";
 write(1, temp_2, 2);
 length += 2;
 }
-if(flags->l == 1)
+if (flags->l == 1)
 num = (unsigned long int)num;
-else if(flags->h == 1)
+else if (flags->h == 1)
 num = (unsigned short int)num;
 while (num > 0)
 {
@@ -161,9 +161,9 @@ temp_2 = "0X";
 write(1, temp_2, 2);
 length += 2;
 }
-if(flags->l == 1)
+if (flags->l == 1)
 num = (unsigned long int)num;
-else if(flags->h == 1)
+else if (flags->h == 1)
 num = (unsigned short int)num;
 while (num > 0)
 {
