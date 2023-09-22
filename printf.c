@@ -48,7 +48,7 @@ if (func == NULL)
 print_prcentage();
 return (-2);
 }
-length = func(args, flags);
+length += func(args, flags);
 return (length);
 }
 /**
@@ -77,16 +77,6 @@ i++, length++;
 else /*if % found*/
 {
 i++;
-if (format[i] == '%')
-{
-write(1, &format[i], 1);
-i++, length++;
-}
-else if (format[i] == '\0')
-return (-1);
-else
-{
-i++;
 length_return = after_percentage(format, &i, args, &flags);
 if (length_return == -1)
 return (-1);
@@ -98,8 +88,5 @@ continue;
 length += length_return;
 i++;
 }}
-return (length);
-}
-
 return (length);
 }
