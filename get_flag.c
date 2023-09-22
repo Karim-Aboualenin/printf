@@ -3,7 +3,7 @@
 /**
  * get_width - get the width
  * @format: the list of characters
- * i: the index
+ * @i: the index
  * @flag: the flag
  * Return: nothing
 */
@@ -25,7 +25,7 @@ break;
 /**
  * get_flag - get the flag after %
  * @format: the list of characters
- * i: the index
+ * @i: the index
  * @flag: the flag
  * Return: 1 if there is flag raised and 0 otherwise
 */
