@@ -41,7 +41,7 @@ return (length);
 if (format[*i] == '\0')
 return (-1);
 while (get_flag(format[*i], flags))
-i++;
+(*i)++;
 func = get_print_function(format[*i], flags);
 if (func == NULL)
 {
