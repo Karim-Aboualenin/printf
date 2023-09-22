@@ -16,8 +16,8 @@
 
 typedef struct specifiers
 {
-char flag;
-int (*func)(char c);
+char specifier;
+int (*func)(va_list);
 } specifiers_t;
 
 /**
