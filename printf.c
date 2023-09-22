@@ -18,6 +18,9 @@ void flags_restarted(flags_t *flags)
 flags->hash = 0;
 flags->plus = 0;
 flags->space = 0;
+flags->l = 0;
+flags->h = 0;
+
 }
 /**
  * after_percentage - a function that handle cases if % is found
@@ -61,7 +64,7 @@ return (length);
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0, length_return = 0;
-flags_t flags = {0, 0, 0};
+flags_t flags = {0, 0, 0, 0, 0};
 va_list args;
 if (format == NULL)
 return (-1);

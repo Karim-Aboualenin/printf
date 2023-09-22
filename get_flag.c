@@ -23,5 +23,15 @@ if (c == ' ')
 flag->space = 1;
 return (1);
 }
+if (c == 'l')
+{
+flag->l = 1;
+return (1);
+}
+if (c == 'h')
+{
+flag->h = 1;
+return (1);
+}
 return (0);
 }

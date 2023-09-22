@@ -14,6 +14,8 @@
  * @plus: a flag is raised when + appear after %
  * @space: a flag is raised when space appear after %
  * @hash: a flag is raised when # appear after %
+ * @l: a flag is raised when l appear after %
+ * @h: a flag is raised when h appear after %
  */
 
 typedef struct flags
@@ -21,6 +23,8 @@ typedef struct flags
 int plus;
 int space;
 int hash;
+int l;
+int h;
 } flags_t;
 
 /**
