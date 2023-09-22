@@ -9,34 +9,9 @@ void print_prcentage(void)
 char temp = '%';
 write(1, &temp, 1);
 }
-/**
- * after_percentage - a function that handle cases if % is found
- * @c: the char after percentage
- * @args: the list contain characters
- * Return: length that added to printed string
-*/
-int after_percentage(char c, va_list args)
-{
-int length = 0;
-int (*func)(va_list);
-if (c == '%')
-{
-write(1, &c, 1);
-length++;
-return (length);
-}
-if (c == '\0')
-return (-1);
-func = get_print_function(c);
-if (func == NULL)
-{
-print_prcentage();
-length++;
-return (1);
-}
-length = func(args);
-return (length);
-}
+
+
+
 /**
  * _printf - a function that produces output according to a format.
  * @format: is a character string. The format string is
@@ -48,6 +23,7 @@ return (length);
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0, length_return = 0;
+int (*func)(va_list);
 va_list args;
 if (format == NULL)
 return (-1);
@@ -62,11 +38,26 @@ i++, length++;
 else /*if % found*/
 {
 i++;
-length_return = after_percentage(format[i], args);
-if (length_return == -1)
+if (format[i] == '%')
+{
+write(1, &format[i], 1);
+i++, length++;
+}
+else if (format[i] == '\0')
 return (-1);
-length += length_return;
+else
+{
+func = get_print_function(format[i]);
+if (func == NULL)
+{
+print_prcentage();
+length++;
+}
+else
+{
+length_return = func(args);
 i++;
-}}
+length += length_return;
+}}}}
 return (length);
 }
