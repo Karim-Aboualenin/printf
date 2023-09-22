@@ -20,7 +20,7 @@ flags->plus = 0;
 flags->space = 0;
 flags->l = 0;
 flags->h = 0;
-
+flags->width = 0;
 }
 /**
  * after_percentage - a function that handle cases if % is found
@@ -43,7 +43,7 @@ return (length);
 }
 if (format[*i] == '\0')
 return (-1);
-while (get_flag(format[*i], flags))
+while (get_flag(format, i, flags))
 (*i)++;
 func = get_print_function(format[*i], flags);
 if (func == NULL)
@@ -64,7 +64,7 @@ return (length);
 int _printf(const char *format, ...)
 {
 int i = 0, length = 0, length_return = 0;
-flags_t flags = {0, 0, 0, 0, 0};
+flags_t flags = {0, 0, 0, 0, 0, 0};
 va_list args;
 if (format == NULL)
 return (-1);

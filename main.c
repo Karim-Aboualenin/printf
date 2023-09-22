@@ -11,9 +11,8 @@ int main(void)
 {
 
     int len, len2;
-       len2 =  printf("%+d\n",90);
-
-   len =  _printf("%+d\n",90);
+       len =  _printf("%12s\n","hello");
+       len2 =  printf("%12s\n", "hello");
    printf("%d  %d",len,len2);
     return (0);
 }

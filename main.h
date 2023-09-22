@@ -8,7 +8,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-
 /**
  * struct flags - Struct to choose the right action based on the flag
  * @plus: a flag is raised when + appear after %
@@ -17,7 +16,7 @@
  * @l: a flag is raised when l appear after %
  * @h: a flag is raised when h appear after %
  */
-
+ 
 typedef struct flags
 {
 int plus;
@@ -25,8 +24,9 @@ int space;
 int hash;
 int l;
 int h;
+int width;
 } flags_t;
-
+typedef struct width width_t;
 /**
  * struct specifiers - Struct to choose the right print function
  * @specifier: The specifer
@@ -61,6 +61,8 @@ int print_reverse(va_list args, flags_t *flags);
 int print_rot_13(va_list args, flags_t *flags);
 void print_prcentage(void);
 int after_percentage(const char *format, int *i, va_list args, flags_t *flags);
-int get_flag(char c, flags_t *flag);
+int get_flag(const char *format, int *i, flags_t *flag);
+void flags_restarted(flags_t *flags);
+int _isdigit(char c);
 
 #endif
