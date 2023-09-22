@@ -56,10 +56,10 @@ if (format[*i] == 'h')
 flag->h = 1;
 return (1);
 }
-if(_isdigit(format[*i]))
+if (_isdigit(format[*i]))
 {
 get_width(format, i, flag);
-return(1);
+return (1);
 }
 return (0);
 }

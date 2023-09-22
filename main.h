@@ -16,7 +16,6 @@
  * @l: a flag is raised when l appear after %
  * @h: a flag is raised when h appear after %
  */
- 
 typedef struct flags
 {
 int plus;
