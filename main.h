@@ -55,7 +55,7 @@ int print_hexa(va_list args, flags_t *flags);
 int print_Hexa(va_list args, flags_t *flags);
 int print_STRING(va_list args, flags_t *flags);
 int print_pointer(va_list args, flags_t *flags);
-int print_long_to_hexa(unsigned long int num);
+int print_long_to_hexa(unsigned long int num, flags_t *flags);
 int print_reverse(va_list args, flags_t *flags);
 int print_rot_13(va_list args, flags_t *flags);
 void print_prcentage(void);
