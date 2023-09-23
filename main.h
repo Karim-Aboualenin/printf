@@ -15,7 +15,7 @@
  * @hash: a flag is raised when # appear after %
  * @l: a flag is raised when l appear after %
  * @h: a flag is raised when h appear after %
- * @width: the field width 
+ * @width: the field width
  */
 typedef struct flags
 {
