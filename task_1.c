@@ -2,13 +2,33 @@
 /**
  * convert_int - take an argument and turn to number
  * @args: the list contain characters
+ * @flags: the flags
  * Return: the number of characters in the number
 */
 
-int convert_int(va_list args)
+int convert_int(va_list args, flags_t *flags)
 {
 int num = va_arg(args, int);
-return (print_number(num));
+int length = 0;
+char temp;
+if (flags->plus == 1 && num >= 0)
+{
+temp = '+';
+write(1, &temp, 1);
+length++;
+}
+else if (flags->space == 1 && num >= 0)
+{
+temp = ' ';
+write(1, &temp, 1);
+length++;
+}
+if (flags->l == 1)
+num = (long int)num;
+else if (flags->h == 1)
+num = (short int)num;
+length += print_number(num);
+return (length);
 }
 /**
  * print_number - print an integer

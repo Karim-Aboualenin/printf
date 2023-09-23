@@ -7,13 +7,11 @@
  *
  * Return: Always 0
  */
-int main(void)
+
+
+ int main(void)
 {
-    int len;
-   
-
-   len= _printf("Unknown:[%R]\n","hello from another world");
-    printf("Length:[%d]\n", len);
-
+    _printf("%S\n", "Best\nSchool");
     return (0);
 }
+

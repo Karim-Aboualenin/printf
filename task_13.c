@@ -2,13 +2,15 @@
 /**
  * print_reverse - print a reversed string
  * @args: the list contain characters
+ * @flags: the flags
  * Return: number of characters in the string
 */
 
-int print_reverse(va_list args)
+int print_reverse(va_list args, flags_t *flags)
 {
 int len, i = 0;
 char *s = va_arg(args, char *);
+(void)flags;
 if (s == NULL)
 s = "(null)";
 len = _strlen(s);
