@@ -13,16 +13,15 @@ if (flags->l == 1)
 num = (unsigned long int)num;
 else if (flags->h == 1)
 num = (unsigned short int)num;
-return (print_unsign(num, flags));
+return (print_unsign(num));
 }
 /**
  * print_unsign - print an unsigned integer
  * @uns_num: the number
- * @flags: the flags
  * Return: number of characters in the  integer
 */
 
-int print_unsign(unsigned int uns_num, flags_t *flags)
+int print_unsign(unsigned int uns_num)
 {
 int len = 0;
 char temp;
@@ -36,7 +35,7 @@ return (len);
 
 if (uns_num > 9)
 {
-len += print_number(uns_num / 10, flags);
+len += print_number(uns_num / 10);
 }
 temp = uns_num % 10 + '0';
 write(1, &temp, 1);

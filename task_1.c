@@ -27,57 +27,50 @@ if (flags->l == 1)
 num = (long int)num;
 else if (flags->h == 1)
 num = (short int)num;
-length += print_number(num, flags);
+length += print_number(num);
 return (length);
 }
 /**
  * print_number - print an integer
  * @num: the number
- * @flags: the flags
  * Return: number of characters in the  integer
 */
 
-int print_number(int num, flags_t *flags)
+int print_number(int num)
 {
-int org_len = 0, i = 0, len = 0, iter, once = 1;
-char temp = ' ';
-char *number;
-number = malloc(sizeof(int) * 33);
+int len = 0;
+char temp;
 if (num == INT_MIN)
 {
-number[i++] = '-';
-number[i++] = '2';
-org_len += 2;
+temp = '-';
+write(1, &temp, 1);
+len++;
+temp = '2';
+write(1, &temp, 1);
+len++;
 num %= 1000000000;
 num = -num;
 }
 if (num == 0)
 {
-number[i] = '0';
-org_len++;
+temp = '0';
+write(1, &temp, 1);
+len++;
+return (len);
 }
-else
-{
 if (num < 0)
 {
-org_len++;
-number[i++] = '-';
+len++;
+temp = '-';
+write(1, &temp, 1);
 num = -num;
 }
 if (num > 9)
-org_len += print_number(num / 10, flags);
-number[i++] = num % 10 + '0';
-org_len++;
+{
+len += print_number(num / 10);
 }
-if ((flags->width > org_len) && once == 1)
-{
-for (iter = 0; iter < flags->width - org_len - 1; iter++)
-{
+temp = num % 10 + '0';
 write(1, &temp, 1);
 len++;
-once = 0;
-}}
-len += org_len;
-write (1, number, org_len);
 return (len);
 }
